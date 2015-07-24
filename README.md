@@ -9,8 +9,8 @@ service. The purpose is just to play with swagger-php.
 Installation using Composer
 ---------------------------
 
-clone this project
-composer install
+* clone this project
+* composer install
 
 
 Generate swagger.json with doctrine
@@ -21,4 +21,9 @@ Generate swagger.json with doctrine
 Running with docker
 -------------------
 ./docker.sh
+
+View in browser:
+----------------
+
+http://localhost:8080/session-service/
 

@@ -22,6 +22,11 @@ RUN cd /opt/swagger/ && NODE_PATH=/opt/node PATH=$PATH:/opt/node/bin /opt/node/b
 RUN cd /opt/swagger/ && NODE_PATH=/opt/node PATH=$PATH:/opt/node/bin bower --allow-root i
 RUN cd /opt/swagger/ && NODE_PATH=/opt/node PATH=$PATH:/opt/node/bin grunt build
 
+RUN sed -i  "s/hostname: 'localhost'/hostname:'0.0.0.0'/" /opt/swagger/grunt/connect.js
+RUN sed -i "s/open: '.*' + developmentPort/open: 'http:\/\/0.0.0.0:3000'/" /opt/swagger/grunt/connect.js 
+RUN sed -i "s/hostname: .* 'localhost' : '0\.0\.0\.0'/hostname: '0.0.0.0'/" /opt/swagger/grunt/connect.js 
+RUN sed -i "s/var isProduction = .*;/var isProduction=false;/" /opt/swagger/app/scripts/bootstrap.js
+
 EXPOSE 80
 
 

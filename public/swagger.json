@@ -1,0 +1,152 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "A SessionService API",
+        "description": "example users: james,yarek,sascha,mike example password: 12345",
+        "version": "0.1"
+    },
+    "paths": {
+        "/session-service/session/{sid}": {
+            "get": {
+                "tags": [
+                    "API"
+                ],
+                "description": "Lookup an existing session by session id (sid).",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "sid",
+                        "in": "path",
+                        "description": "session identifier (sid)",
+                        "required": "true",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The session information for the given session id (sid).",
+                        "schema": {
+                            "$ref": "#/definitions/Session"
+                        }
+                    },
+                    "404": {
+                        "description": "session not found"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "API"
+                ],
+                "description": "Delete an existing session identified by the given session id (sid).",
+                "parameters": [
+                    {
+                        "name": "sid",
+                        "in": "path",
+                        "description": "The session id for the session to be deleted.",
+                        "required": "true",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Always returns 200 OK."
+                    }
+                }
+            }
+        },
+        "/session-service/session": {
+            "post": {
+                "tags": [
+                    "API"
+                ],
+                "description": "Create a new session by specifying login-name and password.",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "login-data",
+                        "in": "body",
+                        "description": "The login-name and password identifying the user.",
+                        "required": "true",
+                        "schema": {
+                            "$ref": "#/definitions/LoginData"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The session information for the given session id (sid).",
+                        "schema": {
+                            "$ref": "#/definitions/Session"
+                        }
+                    },
+                    "401": {
+                        "description": "login failed"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "LoginData": {
+            "required": [
+                "login",
+                "pwd"
+            ],
+            "properties": {
+                "login": {
+                    "type": "string",
+                    "format": "string",
+                    "example": "mike"
+                },
+                "pwd": {
+                    "type": "string",
+                    "format": "string",
+                    "example": "12345"
+                }
+            }
+        },
+        "Session": {
+            "required": [
+                "name",
+                "session"
+            ],
+            "properties": {
+                "sessionId": {
+                    "type": "string",
+                    "format": "string"
+                },
+                "user": {
+                    "$ref": "#/definitions/User"
+                }
+            },
+            "xml": {
+                "name": "session",
+                "wrapped": "true"
+            }
+        },
+        "User": {
+            "properties": {
+                "uid": {
+                    "type": "string",
+                    "format": "string"
+                },
+                "login": {
+                    "type": "string",
+                    "format": "string"
+                },
+                "name": {
+                    "type": "string",
+                    "format": "string"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "name": "mike/session",
+    "description": "example API to play with API docs",
+    "license": "zx",
+    "keywords": [
+        "framework",
+        "zf2",
+	"zx"
+    ],
+    "homepage": "http://www.zanox.com/",
+    "require": {
+        "php": ">=5.5",
+        "zendframework/zendframework": "~2.5",
+	"zircote/swagger-php": "*"
+    }
+}

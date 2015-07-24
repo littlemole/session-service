@@ -19,7 +19,7 @@ RUN /opt/node/bin/npm install --silent -g bower
 # install swagger editor
 RUN git clone https://github.com/swagger-api/swagger-editor.git /opt/swagger/
 RUN cd /opt/swagger/ && NODE_PATH=/opt/node PATH=$PATH:/opt/node/bin /opt/node/bin/npm i
-RUN cd /opt/swagger/ && NODE_PATH=/opt/node PATH=$PATH:/opt/node/bin bower i
+RUN cd /opt/swagger/ && NODE_PATH=/opt/node PATH=$PATH:/opt/node/bin bower --allow-root i
 RUN cd /opt/swagger/ && NODE_PATH=/opt/node PATH=$PATH:/opt/node/bin grunt build
 
 EXPOSE 80

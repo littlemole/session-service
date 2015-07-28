@@ -41,4 +41,3 @@ optional: run swagger-editor
 
 then point your browser to [http://localhost:3000/](http://localhost:3000/)
 
-:

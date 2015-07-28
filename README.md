@@ -17,6 +17,8 @@ Generate swagger.json with doctrine
 -----------------------------------
 ./swag.sh
 
+note: regenerating swagger docs using ./swag.sh needs java, in particular
+you should have a proper Maven setup and JAVA_HOME pointing to a JDK7+.
 
 Running with docker
 -------------------

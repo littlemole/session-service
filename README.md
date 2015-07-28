@@ -40,3 +40,5 @@ optional: run swagger-editor
 * `./docker.sh`
 
 then point your browser to [http://localhost:3000/](http://localhost:3000/)
+
+:-)

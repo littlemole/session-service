@@ -2,7 +2,7 @@
 namespace SessionService\Service;
 
 /**
- * @SWG\Definition(required={"name", "session"},@SWG\Xml(name="session",wrapped="true"))
+ * @SWG\Definition(required={"sessionId", "user"},@SWG\Xml(name="session"))
  */
 class Session {
 

@@ -20,7 +20,7 @@
                         "name": "sid",
                         "in": "path",
                         "description": "session identifier (sid)",
-                        "required": "true",
+                        "required": true,
                         "type": "string"
                     }
                 ],
@@ -46,7 +46,7 @@
                         "name": "sid",
                         "in": "path",
                         "description": "The session id for the session to be deleted.",
-                        "required": "true",
+                        "required": true,
                         "type": "string"
                     }
                 ],
@@ -74,7 +74,7 @@
                         "name": "login-data",
                         "in": "body",
                         "description": "The login-name and password identifying the user.",
-                        "required": "true",
+                        "required": true,
                         "schema": {
                             "$ref": "#/definitions/LoginData"
                         }
@@ -115,8 +115,8 @@
         },
         "Session": {
             "required": [
-                "name",
-                "session"
+                "sessionId",
+                "user"
             ],
             "properties": {
                 "sessionId": {
@@ -128,8 +128,7 @@
                 }
             },
             "xml": {
-                "name": "session",
-                "wrapped": "true"
+                "name": "session"
             }
         },
         "User": {

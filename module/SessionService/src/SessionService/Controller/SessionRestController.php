@@ -27,7 +27,7 @@
      *       description="session identifier (sid)",
      *       in="path",
      *       name="sid",
-     *       required="true",
+     *       required=true,
      *       type="string"      
      *     ),     
      *     @SWG\Response(
@@ -67,7 +67,7 @@
      *       description="The login-name and password identifying the user.",
      *       in="body",
      *       name="login-data",
-     *       required="true",
+     *       required=true,
      *       @SWG\Schema(ref="#/definitions/LoginData")
      *     ),     
      *     @SWG\Response(
@@ -111,7 +111,7 @@
      *       description="The session id for the session to be deleted.",
      *       in="path",
      *       name="sid",
-     *       required="true",
+     *       required=true,
      *	     type="string"
      *     ),     
      *     @SWG\Response(

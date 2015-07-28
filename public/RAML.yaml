@@ -1,0 +1,51 @@
+#%RAML 0.8
+title: "A SessionService API"
+version: "1.0.0"
+baseUri: "http://example.com/v1"
+schemas: 
+    - 
+        "LoginData": '{"type":"object","title":"LoginData"}'
+        "Session": '{"type":"object","title":"Session","properties":{"user":{"type":"object","$ref":"#/schemas/User","required":false,"title":"user"}}}'
+        "User": '{"type":"object","title":"User"}'
+"/session-service/session": 
+    displayName: "SessionserviceSession"
+    post: 
+        description: "Create a new session by specifying login-name and password."
+        body: 
+            "application/json": 
+                schema: "LoginData"
+                example: "{}"
+        responses: 
+            "200": 
+                description: "The session information for the given session id (sid)."
+                body: 
+                    "application/json": 
+                        schema: "Session"
+                        example: '{"user":null}'
+            "401": 
+                description: "login failed"
+"/session-service/session/{sid}": 
+    displayName: "SessionserviceSessionSid"
+    uriParameters: 
+        "sid": 
+            displayName: "sid"
+            description: "session identifier (sid)"
+            type: string
+            required: false
+            repeat: false
+    get: 
+        description: "Lookup an existing session by session id (sid)."
+        responses: 
+            "200": 
+                description: "The session information for the given session id (sid)."
+                body: 
+                    "application/json": 
+                        schema: "Session"
+                        example: '{"user":null}'
+            "404": 
+                description: "session not found"
+    delete: 
+        description: "Delete an existing session identified by the given session id (sid)."
+        responses: 
+            "200": 
+                description: "Always returns 200 OK."

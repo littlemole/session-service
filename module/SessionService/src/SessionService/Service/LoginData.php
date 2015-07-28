@@ -2,19 +2,19 @@
 namespace SessionService\Service;
 
 /**
- * @SWG\Definition(required={"login", "pwd"})
+ * @SWG\Definition(required={"login", "pwd"},@SWG\Xml(name="logindata"))
  */
 class LoginData {
 
     /**
-     * @SWG\Property(format="string",example="mike")
+     * @SWG\Property(example="mike")
      * @var string
      */
      
     public $login;
 
     /**
-     * @SWG\Property(format="string",example="12345")
+     * @SWG\Property(example="12345")
      * @var string
      */
     public $pwd;

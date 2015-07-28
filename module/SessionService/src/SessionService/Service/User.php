@@ -7,20 +7,20 @@ namespace SessionService\Service;
 class User {
 
     /**
-     * @SWG\Property(format="string")
+     * @SWG\Property(example="42")
      * @var string
      */
      
     public $uid;
 
     /**
-     * @SWG\Property(format="string")
+     * @SWG\Property(example="loginname")
      * @var string
      */
     public $login;
     
     /**
-     * @SWG\Property(format="string")
+     * @SWG\Property(example="John Doe")
      * @var string
      */
     public $name;

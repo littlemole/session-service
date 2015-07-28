@@ -66,7 +66,7 @@
      *     @SWG\Parameter(
      *       description="The login-name and password identifying the user.",
      *       in="body",
-     *       name="login-data",
+     *       name="logindata",
      *       required=true,
      *       @SWG\Schema(ref="#/definitions/LoginData")
      *     ),     

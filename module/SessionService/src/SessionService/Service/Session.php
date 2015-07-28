@@ -7,7 +7,7 @@ namespace SessionService\Service;
 class Session {
 
     /**
-     * @SWG\Property(format="string")
+     * @SWG\Property(example="g2321f1e4db901382ed4bd5383eebd79")
      * @var string
      */
      

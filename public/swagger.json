@@ -71,7 +71,7 @@
                 ],
                 "parameters": [
                     {
-                        "name": "login-data",
+                        "name": "logindata",
                         "in": "body",
                         "description": "The login-name and password identifying the user.",
                         "required": true,
@@ -103,14 +103,15 @@
             "properties": {
                 "login": {
                     "type": "string",
-                    "format": "string",
                     "example": "mike"
                 },
                 "pwd": {
                     "type": "string",
-                    "format": "string",
                     "example": "12345"
                 }
+            },
+            "xml": {
+                "name": "logindata"
             }
         },
         "Session": {
@@ -121,7 +122,7 @@
             "properties": {
                 "sessionId": {
                     "type": "string",
-                    "format": "string"
+                    "example": "g2321f1e4db901382ed4bd5383eebd79"
                 },
                 "user": {
                     "$ref": "#/definitions/User"
@@ -135,15 +136,15 @@
             "properties": {
                 "uid": {
                     "type": "string",
-                    "format": "string"
+                    "example": "42"
                 },
                 "login": {
                     "type": "string",
-                    "format": "string"
+                    "example": "loginname"
                 },
                 "name": {
                     "type": "string",
-                    "format": "string"
+                    "example": "John Doe"
                 }
             }
         }

@@ -1,16 +1,19 @@
 Session Example API
 =======================
 
+
 Introduction
 ------------
 This is a simple test API implementing a fictional simple session
 service. The purpose is just to play with swagger-php.
+
 
 Install & run
 -------------
 
 * clone this project
 * `./docker.sh`
+
 
 View in browser:
 ----------------

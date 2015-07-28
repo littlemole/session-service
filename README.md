@@ -16,10 +16,10 @@ View in browser:
 ----------------
 
 Swagger-UI:
-http://localhost:8080/session-service/
+[http://localhost:8080/session-service/](http://localhost:8080/session-service/)
 
 plain json:
-http://localhost:8080/session-service/swagger.json
+[http://localhost:8080/session-service/swagger.json](http://localhost:8080/session-service/swagger.json)
 
 
 Update swagger.json with doctrine
@@ -36,4 +36,4 @@ optional: run swagger-editor
 * cd swagger-editor
 * ./docker.sh
 
-then point your browser to http://localhost:3000/
+then point your browser to [http://localhost:3000/](http://localhost:3000/)

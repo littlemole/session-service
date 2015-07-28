@@ -10,7 +10,7 @@ Install & run
 -------------
 
 * clone this project
-* ./docker.sh
+* `./docker.sh`
 
 View in browser:
 ----------------
@@ -24,7 +24,7 @@ plain json:
 
 Update swagger.json with doctrine
 -------------------------------------------
-./swag.sh
+`./swag.sh`
 
 note: regenerating swagger docs using ./swag.sh needs java, in particular
 you should have a proper Maven setup and JAVA_HOME pointing to a JDK7+.
@@ -33,7 +33,7 @@ you should have a proper Maven setup and JAVA_HOME pointing to a JDK7+.
 optional: run swagger-editor
 ----------------------------
 
-* cd swagger-editor
-* ./docker.sh
+* `cd swagger-editor`
+* `./docker.sh`
 
 then point your browser to [http://localhost:3000/](http://localhost:3000/)
